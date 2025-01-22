@@ -1,0 +1,60 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(90deg, 73605B, 330000);
+    color: #f8f3e9;
+}
+
+header {
+    background-color: #4c2424;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fejlec {
+    text-align: center;
+    background-image: url('/Képek/kezmuves_harmoniakep.png'); 
+    background-size: cover;
+    background-position: center;
+    color: #f8f3e9;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+.content {
+    padding: 20px;
+    background-color: #552929;
+    border-top: 5px solid #d4a373;
+}
+
+.content h2 {
+    color: #fca311;
+}
+
+.card {
+    background-color: #fff;
+    color: #3c1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.card img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
