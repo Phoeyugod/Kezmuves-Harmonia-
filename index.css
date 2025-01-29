@@ -69,3 +69,25 @@ nav ul li a {
     border-radius: 5px;
 }
 
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+}
+
+.fejlec-ketoszlop {
+    display: flex;
+}
+
+.fejlec-ketoszlop1 {
+    width: 20%;
+}
+
+.fejlec-ketoszlop2 {
+    width: 80%;
+}
