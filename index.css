@@ -1,10 +1,14 @@
+*{
+    font-family: "Irish Grover", serif;
+    font-weight: 400;
+    font-style: normal;
+}
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(to bottom, rgb(51 0 0), rgb(115 96 91));
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 
 .container {
@@ -37,19 +41,13 @@ nav ul li a {
 .hero {
     background-image: url(/Képek/kezmuves_harmoniakep.png);
     font-size: 40px;
-    font-family: Arial,Helvetica, sans-serif;
-    background: linear-gradient(to bottom,rgb(51 0 0), rgb(115 96 91) );
-    -webkit-text-fill-color: transparent;
+    background: linear-gradient( );
     padding: 400px 0;
-    color: #F5E0D4;
     text-align: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-.hero span {
-    color: #3f1900;
-}
 
+}
 .about {
     padding: 20px 0;
     text-align: center;
@@ -91,3 +89,13 @@ li {
 .fejlec-ketoszlop2 {
     width: 80%;
 }
+.gradient-text {
+    background-image: linear-gradient(to right, #ffffff, rgb(224 151 98));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+.irish-grover-regular {
+    
+  }  
