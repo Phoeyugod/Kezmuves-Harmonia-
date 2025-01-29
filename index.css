@@ -65,16 +65,21 @@ header {
     border-radius: 10px;
 }
 
-.menulista {
+.fejlec-ketoszlop2 ul {
     list-style-type: none;
     margin-left: 500px;
     padding: 0;
     text-align: right;
 }
 
-.menuitem {
+.fejlec-ketoszlop2 li {
     display: inline;
     font-size: 30px;
+}
+
+.fejlec-ketoszlop2 a {
+    text-decoration: none;
+    color: white;
 }
 
 .fejlec-ketoszlop {
