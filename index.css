@@ -6,6 +6,12 @@ body {
     color: #f8f3e9;
 }
 
+.irish-grover-regular {
+    font-family: "Irish Grover", serif;
+    font-weight: 400;
+    font-style: normal;
+  }  
+
 header {
     background-color: #4c2424;
     padding: 10px 20px;
@@ -59,24 +65,31 @@ header {
     border-radius: 10px;
 }
 
-ul {
+.menulista {
     list-style-type: none;
-    margin: 0;
+    margin-left: 500px;
     padding: 0;
+    text-align: right;
 }
 
-li {
+.menuitem {
     display: inline;
+    font-size: 30px;
 }
 
 .fejlec-ketoszlop {
     display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 .fejlec-ketoszlop1 {
+    flex: calc(20%);
     width: 20%;
 }
 
 .fejlec-ketoszlop2 {
+    flex: calc(80%);
     width: 80%;
 }
