@@ -12,14 +12,6 @@ body {
     font-style: normal;
   }  
 
-header {
-    background-color: #4c2424;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .fejlec {
     text-align: center;
     background-image: url('/Képek/kezmuves_harmoniakep.png'); 
@@ -65,16 +57,23 @@ header {
     border-radius: 10px;
 }
 
+header {
+    height: 130px;
+    background-color: black;
+    justify-content: center;
+}
+
 .fejlec-ketoszlop2 ul {
     list-style-type: none;
-    margin-left: 500px;
-    padding: 0;
-    text-align: right;
+    text-align: center;
+    padding: 0px 10px 0px 0px;
+    margin: 0px 0px 0px 0px
 }
 
 .fejlec-ketoszlop2 li {
     display: inline;
     font-size: 30px;
+    margin: 0px 15px 0px 15px;
 }
 
 .fejlec-ketoszlop2 a {
@@ -85,16 +84,13 @@ header {
 .fejlec-ketoszlop {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: center;
-    gap: 10px;
 }
 
 .fejlec-ketoszlop1 {
-    flex: calc(20%);
-    width: 20%;
+    flex: calc(10%);
+    padding-left: 10px;
 }
 
 .fejlec-ketoszlop2 {
-    flex: calc(80%);
-    width: 80%;
+    flex: calc(90%);
 }
