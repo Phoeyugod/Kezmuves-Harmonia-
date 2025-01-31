@@ -2,11 +2,11 @@
     font-family: "Irish Grover", serif;
     font-weight: 400;
     font-style: normal;
+    
 }
 body {
     margin: 0;
     padding: 0;
-    background-repeat: no-repeat;
     background-size: cover;
     
 }
@@ -14,7 +14,6 @@ body {
 .container {
     width: 80%;
     margin: auto;
-    overflow: hidden;
 }
 
 
@@ -96,6 +95,20 @@ li {
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
 }
-.irish-grover-regular {
-    
-  }  
+.hatter{
+    background-image: linear-gradient(rgb(51 0 0), rgb(115 96 91));
+}
+.gradient-text2 {
+    background-image: linear-gradient(to right, rgb(226 204 157), #fff, rgb(187 96 3));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+.gradient-text3 {
+    background-image: linear-gradient(to right,#fff, rgb(197 0 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
