@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -66,18 +67,12 @@ header {
     list-style-type: none;
     text-align: center;
     padding: 0px 10px 0px 0px;
-    margin: 48px 0px 0px 0px;
-    white-space: nowrap;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    gap: 10px;
+    margin: 0px 0px 0px 0px
 }
 
 .fejlec-ketoszlop2 li {
     display: inline;
-    font-size: 1.8em;
+    font-size: 30px;
     margin: 0px 15px 0px 15px;
 }
 
@@ -87,11 +82,8 @@ header {
 }
 
 .fejlec-ketoszlop {
-    overflow: hidden;
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    gap: 10px;
+    flex-wrap: nowrap;
 }
 
 .fejlec-ketoszlop1 {
@@ -101,9 +93,4 @@ header {
 
 .fejlec-ketoszlop2 {
     flex: calc(90%);
-    order: 2;
-    display: inline-flex;
-    justify-content: space-evenly;
-    align-self: center;
-    padding: 0px 100px;
 }
