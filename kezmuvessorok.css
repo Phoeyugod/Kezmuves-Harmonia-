@@ -30,9 +30,9 @@ margin-top: 5%;
 }
 .monyokep
 {
-width: 120%;
-position: relative;
-margin-left: -5%;
+  width: 140%;
+  position: relative;
+  margin-left: -17%;
 }
 .monyokep2{
   width: 80%;
@@ -48,10 +48,10 @@ margin-left: -5%;
   background-color: rgba(255, 255, 255,0.4);
     width: 20%;
     margin-left: 5%;
-    margin-top: 5%;
+   
     border-radius: 50px 50px 50px 50px;
     text-align: center;
-    padding-bottom: 2%;
+ 
     font-size: 25px;
     float: left;
     display: block;
@@ -77,38 +77,68 @@ margin-left: -5%;
   
 
 } 
-.oszlop1
+.sor1
 {
+  padding-top: 5%;
 
 
 } 
-.oszlop2
-{
-  padding-top: 5%;
-  
-}
+
 #lazyPirate{
 background-color: rgba(255, 255, 255,0.4);
 width: 20%;
-margin-left: 5%;
-margin-top: 5%;
 border-radius: 50px 50px 50px 50px;
 text-align: center;
-padding-bottom: 2%;
+padding-bottom: 0.5%;
 font-size: 25px;
-float: right;
+margin-left: 75%;
+margin-top: -37%;
 display: block;
+
+
 
 }
 .monyokep3
 {
 width: 85%;
-position: relative;
-margin-left: -5%;
+margin-left: 5%;
 margin-right: 5%;
-  margin-left: 5%;
-  margin-top: 5%;
+margin-top: 5%;
 }
+
+.monyokep4
+{
+width: 150%;
+margin-left: -22%;
+margin-right: 5%;
+margin-top: 5%;
+}
+.monyokep5
+{
+width: 145%;
+margin-left: -22%;
+margin-right: -1%;
+margin-top: 19%;
+}
+.monyokep6
+{
+  width: 134%;
+  margin-left: -19%;
+  margin-right: 5%;
+  margin-top: 0%;
+}
+#flyingrabbit{
+  background-color: rgba(255, 255, 255,0.4);
+  width: 20%;
+  border-radius: 50px 50px 50px 50px;
+  text-align: center;
+  padding-bottom: 1.5%;
+  font-size: 25px;
+  margin-left: 76%;
+  margin-top: -42%;
+  display: block;
+ 
+  }
 
 
 
