@@ -30,16 +30,20 @@ margin-top: 5%;
 }
 .monyokep
 {
-  width: 140%;
+  width: 130%;
   position: relative;
-  margin-left: -17%;
+ margin-left: -11%;
+ 
+
+
+
 }
 .monyokep2{
-  width: 80%;
+  width: 82%;
   position: static;
-  margin-right: 5%;
-  margin-left: 5%;
-  margin-top: 5%;
+  margin: auto;
+
+
 
 }
 
@@ -47,14 +51,19 @@ margin-top: 5%;
 #mangohero{
   background-color: rgba(255, 255, 255,0.4);
     width: 20%;
-    margin-left: 5%;
+   margin-left: 10%;
+
    
     border-radius: 50px 50px 50px 50px;
     text-align: center;
+    display: inline-grid;
+    justify-content: space-between;
+
+    
+
  
     font-size: 25px;
-    float: left;
-    display: block;
+    
 
 }
 .irish-grover-regular {
@@ -66,14 +75,20 @@ margin-top: 5%;
 {
  
   background-color: rgba(255, 255, 255,0.4);
-  width: 20%;
-  margin: auto;
-  border-radius: 50px 50px 50px 50px;
-  text-align: center;
-  padding-bottom: 0.5%;
-  font-size: 25px;
-  float: none;
-  display: block;
+    width: 20%;
+    margin-left: 10%;
+   
+    border-radius: 50px 50px 50px 50px;
+    text-align: center;
+ 
+    font-size: 25px;
+
+    display: inline-grid;
+    justify-content: space-between;
+  
+   
+   
+   
   
 
 } 
@@ -85,15 +100,19 @@ margin-top: 5%;
 } 
 
 #lazyPirate{
-background-color: rgba(255, 255, 255,0.4);
-width: 20%;
-border-radius: 50px 50px 50px 50px;
-text-align: center;
-padding-bottom: 0.5%;
-font-size: 25px;
-margin-left: 75%;
-margin-top: -37%;
-display: block;
+  background-color: rgba(255, 255, 255,0.4);
+    width: 20%;
+    margin-left: 10%;
+   
+    border-radius: 50px 50px 50px 50px;
+    text-align: center;
+ 
+    font-size: 25px;
+    display: inline-grid;
+    justify-content: space-between;
+   
+    
+    
 
 
 
@@ -101,8 +120,7 @@ display: block;
 .monyokep3
 {
 width: 85%;
-margin-left: 5%;
-margin-right: 5%;
+margin: auto;
 margin-top: 5%;
 }
 
