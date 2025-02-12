@@ -119,8 +119,8 @@ li {
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
 }
-.gradient-text4 {
-    background-image: linear-gradient(to right,#fff 20%, rgb(197 0 0));
+.gradient-text5 {
+    background-image: linear-gradient(to right,rgb(197 0 0) 20%, rgb(102 102 102));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-background-clip: text;
@@ -217,8 +217,86 @@ li {
             cursor: pointer;
         }
         .szurkehatter {
-            background-color: rgba(255, 255, 255,0.4);
+            background-color: rgba(255, 255, 255,0.2);
             border-radius: 60px;
             padding: 20px;
             margin: 20px;
         }
+        .contactmodal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-top: 60px;
+}
+
+.contactmodal-content {
+    background-image: linear-gradient(rgb(51 0 0), rgb(115 96 91));
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 60px;
+    position: relative;
+    color:black;
+}
+
+.contactmodal-header {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.contactmodal-input {
+    width: 80%;
+    padding: 10px;
+    margin: 20px auto;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: block;
+    background-color: rgba(255, 255, 255,0.5);
+    color: black;
+}
+
+.contactmodal-input::placeholder {
+    color: black;
+    font-weight: bold;
+}
+
+.contactmodal-close {
+    color: red;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contactmodal-close:hover {
+    color: darkred;
+}
+
+
+.contactmodal-button {
+    display: block;
+    width: 70%;
+    padding: 10px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255,0.5);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.contactmodal-button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
