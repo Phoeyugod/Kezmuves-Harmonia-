@@ -179,15 +179,70 @@ margin: auto;
 .kodfelho
 {
   width: 110%;
-  margin-right: 5%;
+ margin: auto;
 
   
 }
 .etalon
 {
-  width: 89%;
-margin: auto;
+  width: 118%;
+  position: relative;
+  right: 5%;
 }
+.napkincs
+{
+  width: 110%;
+  margin: auto;
+  position: relative;
+  bottom: 5%;
+  
+}
+
+
+
+
+.honey
+{
+  width:  125%;
+  margin: auto;
+  position: relative;
+  right: 5%;
+  
+}
+.brown
+{
+  width: 99%;
+  margin: auto;
+}
+.blueberry
+{
+  width: 131%;
+  margin: auto;
+  position: relative;
+  right: 10%;
+}
+.raspberry
+{
+  width: 107%;
+  margin: auto;
+}
+.gingerchili
+{
+  width: 119%;
+  margin: auto;
+  position: relative;
+  right: 5%;
+}
+.napkincs2
+{
+  width: 77%;
+  margin: auto;
+  position: relative;
+  top: 5%;
+  left: 20%;
+  
+}
+
 
 
 
