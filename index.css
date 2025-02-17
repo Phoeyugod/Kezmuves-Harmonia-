@@ -139,11 +139,11 @@ li {
     border-radius: 60px;
     overflow: hidden;
     max-width: 300px;
+    height: 530px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
     background-color: rgba(255, 255, 255,0.4);
     margin-left: 10%;
-    
 }
 
 .card:hover {
@@ -151,10 +151,10 @@ li {
 }
 
 .card-image {
-    width: 100%;
-    height: auto;
+    width: 258px;
+    height: 470px;
+    object-fit: cover;
 }
-
 .card-content {
     padding: 5px;
     text-align: center;
