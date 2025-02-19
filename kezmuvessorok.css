@@ -255,29 +255,30 @@ margin: auto;
 
   #mangohero
   {
-    display: flex;
-    flex-wrap: nowrap;
-  
+     grid-template-columns: repeat(2, 1fr); 
 
-  
-
-
-
+ 
   }
   #flyingrabbit
   {
-    display: flex;
-    flex-wrap: nowrap;
 
+    grid-template-columns: repeat(2, 1fr); 
   
 
   }
   #lazyPirate
   {
-    display: flex;
-    flex-wrap: nowrap;
-   
+
+    grid-template-columns: repeat(2, 1fr); 
         
+  }
+  #deadrabbit
+  {
+
+
+    grid-template-columns: repeat(2, 1fr); 
+
+
   }
 
 
