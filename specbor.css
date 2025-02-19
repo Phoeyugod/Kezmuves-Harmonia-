@@ -6,22 +6,20 @@ body {
     font-family: "Irish Grover", serif;
 }
 .section {
-    
     margin: 20px auto;
     padding: 20px;
     width: 90%;
     border-radius: 10px;
 }
 h2 {
-    font-size: 2em;
-
+    font-size: 4em;
+    background-color: rgba(255, 255, 255,0.4);
 }
 .wine-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
-    
 }
 .wine-item {
     background-color: rgba(255, 255, 255,0.4);
@@ -50,4 +48,7 @@ h2 {
     -webkit-text-fill-color: transparent; 
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
+}
+.hatter{
+    background-color: rgba(255, 255, 255,0.4);
 }
