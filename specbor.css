@@ -53,3 +53,31 @@ h2 {
     background-color: rgba(255, 255, 255,0.2);
     border-radius: 60px;
 }
+@media (max-width: 980px) {
+    .wine-container {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .wine-item {
+        width: 250px; 
+    }
+    .wine-item:nth-child(3) {
+        width: 250px; 
+        justify-content: center;
+        margin-left: 34%;
+    }
+}
+@media (max-width: 657px) {
+    .wine-container {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .wine-item {
+        width: 250px; 
+    }
+    .wine-item:nth-child(3) {
+        width: 250px; 
+        justify-content: center;
+        margin-left: 1%;
+    }
+}
