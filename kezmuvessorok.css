@@ -12,6 +12,13 @@ font-style: normal;
  
 
 }
+.sor1
+{
+  display: flex;
+
+  flex-wrap: wrap-reverse;
+  padding-top: 5%;
+}
 
 
 .cimsor1{
@@ -41,7 +48,8 @@ margin-top: 5%;
   width: 82%;
   position: static;
   margin: auto;
-    margin-top: 5%;
+  margin-top: 5%;
+
 
 
 
@@ -50,19 +58,21 @@ margin-top: 5%;
 
 #mangohero{
   background-color: rgba(255, 255, 255,0.4);
-    width: 20%;
-   margin-left: 10%;
+  width: 20%;
+  display: block;
+  
 
    
-    border-radius: 50px 50px 50px 50px;
-    text-align: center;
-    display: inline-grid;
+  border-radius: 50px 50px 50px 50px;
+  text-align: center;
+  margin: 5%;
+
     
 
     
 
  
-    font-size: 25px;
+  font-size: 25px;
     
 
 }
@@ -75,15 +85,17 @@ margin-top: 5%;
 {
  
   background-color: rgba(255, 255, 255,0.4);
-    width: 20%;
-    margin-left: 10%;
-   
-    border-radius: 50px 50px 50px 50px;
-    text-align: center;
+  width: 20%;
  
-    font-size: 25px;
+  margin: 5%;
+   
+  border-radius: 50px 50px 50px 50px;
+  text-align: center;
+  display: block;
+ 
+  font-size: 25px;
 
-    display: inline-grid;
+ 
  
   
    
@@ -92,23 +104,19 @@ margin-top: 5%;
   
 
 } 
-.sor1
-{
-  padding-top: 5%;
 
-
-} 
 
 #lazyPirate{
   background-color: rgba(255, 255, 255,0.4);
-    width: 20%;
-    margin-left: 10%;
+  width: 20%;
+
+  margin: 5%;
    
-    border-radius: 50px 50px 50px 50px;
-    text-align: center;
- 
-    font-size: 25px;
-    display: inline-grid;
+  border-radius: 50px 50px 50px 50px;
+  text-align: center;
+  font-size: 25px;
+  display: block;
+
    
    
     
@@ -150,11 +158,12 @@ margin-top: 19%;
   width: 20%;
   border-radius: 50px 50px 50px 50px;
   text-align: center;
-  padding-bottom: 1.5%;
+
   font-size: 25px;
-  margin-left: 76%;
-  margin-top: -42%;
   display: block;
+
+  margin: 5%;
+
  
   }
   .oarany
@@ -251,35 +260,16 @@ margin: auto;
   -moz-text-fill-color: transparent;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 800px) {
 
-  #mangohero
+  .sor1
   {
-     grid-template-columns: repeat(2, 1fr); 
+    display: inline-flex;
+    
 
  
   }
-  #flyingrabbit
-  {
 
-    grid-template-columns: repeat(2, 1fr); 
-  
-
-  }
-  #lazyPirate
-  {
-
-    grid-template-columns: repeat(2, 1fr); 
-        
-  }
-  #deadrabbit
-  {
-
-
-    grid-template-columns: repeat(2, 1fr); 
-
-
-  }
 
 
 
