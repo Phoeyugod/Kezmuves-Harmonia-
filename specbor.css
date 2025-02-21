@@ -25,7 +25,7 @@ h2 {
     background-color: rgba(255, 255, 255,0.4);
     padding: 10px;
     border-radius: 10px;
-    width: 200px;
+    width: 250px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
 }
@@ -50,5 +50,6 @@ h2 {
     -moz-text-fill-color: transparent;
 }
 .hatter{
-    background-color: rgba(255, 255, 255,0.4);
+    background-color: rgba(255, 255, 255,0.2);
+    border-radius: 60px;
 }
