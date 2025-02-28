@@ -1,0 +1,91 @@
+
+ 
+body {
+    color: white;
+    background-image: linear-gradient(#330000, #73605B);
+    font-family: "Irish Grover", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+   
+   
+  .cimsor1 {
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 90%;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 50px;
+    font-size: 31px;
+    text-align: center;
+  }
+   
+   
+  .sor1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+   
+  .sor1 div {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+  }
+   
+   
+  .sor1 img {
+    width: 180px;
+    height: 250px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+  #mangohero
+  {
+    margin: 3%;
+  }
+   
+   
+  @media (max-width: 980px) {
+    .sor1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    #mangohero
+  {
+    margin: auto;
+  }
+  
+  }
+   
+   
+  @media (max-width: 600px) {
+    .sor1 {
+        grid-template-columns: 1fr;
+    }
+  }
+  .gradient-text {
+    background-image: linear-gradient(to right, #ffffff, rgb(224 151 98));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
