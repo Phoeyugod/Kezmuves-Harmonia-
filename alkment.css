@@ -10,8 +10,7 @@ body {
     margin: 0;
     padding: 0;
   }
-   
-   
+
   .cimsor1 {
     
     background-color: rgba(255, 255, 255, 0.4);
@@ -47,10 +46,12 @@ body {
     object-fit: contain;
     display: block;
     margin: 0 auto;
+ 
+       
   }
   #mangohero
   {
-    margin: 3%;
+    margin: 5%;
   }
    
    
@@ -80,6 +81,7 @@ body {
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
   }
+
   
   
   
