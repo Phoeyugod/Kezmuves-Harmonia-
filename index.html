@@ -14,11 +14,28 @@
 <body class="irish-grover-regular">
 
     <header>
-        <!--Totya Munkája-->
+        <div class="fejlec-ketoszlop">
+            <div class="fejlec-ketoszlop1">
+                <img src="./Képek/logo.png" alt="logó" title="logó">
+            </div>
+            <div class="fejlec-ketoszlop2">
+                <div class="hamburger" onclick="toggleMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul>
+                    <li><a href="">Kezdőlap</a></li>
+                    <li><a href="">Kézműves Sörök</a></li>
+                    <li><a href="">Alkoholmentes Sörök</a></li>
+                    <li><a href="">Speciális Borászatok Borai</a></li>
+                </ul>
+            </div>
+        </div>
         <section class="hero">
             <div class="container">
                 <h1 class="gradient-text">Kézműves Harmónia</h1>
-                <p style="font-size: 30px;"class="gradient-text">Kortyolj stílust, élvezd a különbséget!</p>
+                <p style="font-size: 30px;" class="gradient-text">Kortyolj stílust, élvezd a különbséget!</p>
             </div>
         </section>
     </header>
@@ -83,6 +100,10 @@
     </footer>
 
 <script>
+    function toggleMenu() {
+            const nav = document.querySelector('.fejlec-ketoszlop2 ul');
+            nav.classList.toggle('active');
+        }
         function closeModal()
          {
     document.getElementById('contactModal').style.display = 'none';
