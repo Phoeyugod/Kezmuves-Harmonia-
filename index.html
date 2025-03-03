@@ -19,17 +19,20 @@
                 <img src="./Képek/logo.png" alt="logó" title="logó">
             </div>
             <div class="fejlec-ketoszlop2">
-                <div class="hamburger" onclick="toggleMenu()">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <ul>
-                    <li><a href="">Kezdőlap</a></li>
-                    <li><a href="">Kézműves Sörök</a></li>
-                    <li><a href="">Alkoholmentes Sörök</a></li>
-                    <li><a href="">Speciális Borászatok Borai</a></li>
-                </ul>
+                <nav>
+                    <div class="hamburger" onclick="toggleMenu()">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <ul>
+                        <li><a href="index.html">Kezdőlap</a></li>
+                        <li><a href="kezmuvessorok.html">Kézműves Sörök</a></li>
+                        <li><a href="alkment.html">Alkohol mentes Sörök</a></li>
+                        <li><a href="specbor.html">Speciális Borászatok Borai</a></li>
+                    </ul>
+                </nav>
+                
             </div>
         </div>
         <section class="hero">
@@ -100,10 +103,11 @@
     </footer>
 
 <script>
-    function toggleMenu() {
-            const nav = document.querySelector('.fejlec-ketoszlop2 ul');
-            nav.classList.toggle('active');
-        }
+function toggleMenu() {
+    const navLinks = document.querySelector('nav ul');
+    navLinks.classList.toggle('active');
+}
+
         function closeModal()
          {
     document.getElementById('contactModal').style.display = 'none';

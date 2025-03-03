@@ -362,10 +362,12 @@ li {
 .fejlec-ketoszlop1 {
     flex: calc(10%);
     padding-left: 10px;
+    background-color: black !important;
 }
 
 .fejlec-ketoszlop2 {
     flex: calc(90%);
+    background-color: black !important;
 }
 nav {
     background-color: black;
@@ -376,13 +378,20 @@ nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    flex: 1;
+    text-align: center;
 }
 
 nav ul li a {
-    color: rgb(0, 0, 0);
+    color: #ffffff;
     text-decoration: none;
-    padding: 10px;
+
     display: block;
+    transition: color 0.3s ease;
 }
 
 .hamburger {
