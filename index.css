@@ -332,7 +332,7 @@ li {
 }
 .fejlec-ketoszlop2 ul {
     list-style-type: none;
-    text-align: center;
+    text-align: right;
     padding: 0px 10px 0px 0px;
     margin: 48px 0px 0px 0px;
     white-space: nowrap;
@@ -344,7 +344,7 @@ li {
 }
 
 .fejlec-ketoszlop2 li {
-    display: inline;
+
     font-size: 1.8em;
     margin: 0px 15px 0px 15px;
 }
@@ -369,56 +369,58 @@ li {
     flex: calc(90%);
     background-color: black !important;
 }
-nav {
-    background-color: black;
-    padding: 10px;
-}
 
-nav ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-nav ul li {
-    flex: 1;
-    text-align: center;
-}
-
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-
-    display: block;
-    transition: color 0.3s ease;
-}
 
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
 }
 
 .hamburger div {
-    width: 25px;
-    height: 3px;
+    width: 30px;
+    height: 6px;
     background-color: white;
     margin: 4px;
     transition: 0.3s;
 }
 
 @media (max-width: 768px) {
-    nav ul {
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .fejlec-ketoszlop {
         flex-direction: column;
-        display: none;
     }
 
-    nav ul.active {
-        display: flex;
+    .fejlec-ketoszlop1, .fejlec-ketoszlop2 {
+        width: 100%;
+    }
+
+    .fejlec-ketoszlop2 ul {
+        flex-direction: column;
+        display: none; 
+    }
+
+    .fejlec-ketoszlop2 ul.active {
+        display: flex; 
     }
 
     .hamburger {
         display: flex;
+    }
+}
+@media (max-width: 1100px) {
+    .fejlec-ketoszlop2 li {
+        font-size: 1.5em; 
     }
 }
