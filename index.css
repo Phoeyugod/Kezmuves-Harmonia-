@@ -424,3 +424,36 @@ li {
         font-size: 1.5em; 
     }
 }
+
+
+/* footer törés */
+footer {
+    background-color: black;
+}
+
+footer h3 {
+    color: white;
+}
+
+footer h4 {
+    color: white;
+}
+
+footer h5 {
+    color: white;
+}
+
+.footertelefon img {
+    width: 45px;
+    height: 35px;
+}
+
+.footermail img {
+    width: 45px;
+    height: 45px;
+}
+
+.footercopyright img {
+    width: 45px;
+    height: 20px;
+}
