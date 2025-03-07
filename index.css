@@ -429,6 +429,7 @@ li {
 /* footer törés */
 footer {
     background-color: black;
+    padding-top: 1px;
 }
 
 footer h3 {
@@ -443,9 +444,36 @@ footer h5 {
     color: white;
 }
 
+.footertelefoncopyrightflex {
+    display: flex;
+    flex-direction: row;
+}
+
+.footertelefon {
+    display: flex;
+    flex-direction: row;
+}
+
+.footermail {
+    display: flex;
+    flex-direction: row;
+    margin-left: 40px;
+}
+
+.footercopyright {
+    display: flex;
+    flex-direction: row;
+}
+
 .footertelefon img {
     width: 45px;
     height: 35px;
+}
+
+.footertelefon h4 {
+    margin-left: 5px;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 .footermail img {
@@ -453,7 +481,21 @@ footer h5 {
     height: 45px;
 }
 
+.footermail h4 {
+    margin-left: 10px;
+    font-size: 24px;
+}
+
 .footercopyright img {
     width: 45px;
     height: 20px;
+}
+
+.footercopyright h5 {
+    font-size: 16px;
+}
+
+.footercim {
+    margin-left: 40px;
+    font-size: 30px;
 }
