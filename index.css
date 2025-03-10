@@ -425,6 +425,7 @@ li {
         flex-wrap: wrap;
     
     }
+    
 }
 @media(max-width:1155px){
     .fejlec-ketoszlop2 ul{
@@ -434,10 +435,12 @@ li {
 @media(max-width:1055px){
     .fejlec-ketoszlop2 ul{
         flex-wrap: wrap;
+        justify-content: center;
     }
-}
-.fejlec-ketoszlop2 ul li:nth-child(4) {
-    margin-left: 120px;
+    .fejlec-ketoszlop2 ul li:nth-child(4) {
+        margin-right: 20px;
+    }
+    
 }
 
 
