@@ -330,6 +330,7 @@ li {
     opacity: 0.2; 
     z-index: -1;
 }
+/* fejlec törés */
 .fejlec-ketoszlop2 ul {
     list-style-type: none;
     text-align: right;
@@ -339,15 +340,37 @@ li {
     overflow: hidden;
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
 
 
-
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .nav {
+    display: flex;
+    gap: clamp(5px, 5vw, 50px); /* A távolság csökken 1050px alatt */
+  }
+  
+  .nav a {
+    text-decoration: none;
+    font-size: clamp(12px, 2vw, 18px); /* A betűméret is folyamatosan csökken */
+    transition: all 0.3s ease-in-out; /* Szép animáció */
+  }
+  
+  
+.special-bor {
+    white-space: nowrap; 
 }
 
 .fejlec-ketoszlop2 li {
 
-    font-size: 1.8em;
-    margin: 0px 15px 0px 15px;
+    
+    margin: 0px 35px 0px 30px;
 }
 
 .fejlec-ketoszlop2 a {
@@ -367,8 +390,10 @@ li {
 }
 
 .fejlec-ketoszlop2 {
-    flex: calc(90%);
+    flex: calc(99%);
     background-color: black !important;
+    font-size: 23px;
+    
 }
 
 
@@ -420,28 +445,30 @@ li {
         display: flex;
     }
 }
-@media(max-width:855px){
-    .fejlec-ketoszlop2 ul{
-        flex-wrap: wrap;
-    
-    }
-    
-}
-@media(max-width:1155px){
-    .fejlec-ketoszlop2 ul{
-        font-size: smaller;
-    }
-}
+
 @media(max-width:1055px){
     .fejlec-ketoszlop2 ul{
-        flex-wrap: wrap;
+
         justify-content: center;
-    }
-    .fejlec-ketoszlop2 ul li:nth-child(4) {
-        margin-right: 20px;
     }
     
 }
+.header-menu {
+    font-size: 18px;
+  }
+  
+  @media (max-width: 1050px) {
+    .header-menu {
+      
+
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .header-menu {
+      font-size: 2px;
+    }
+  }
 
 
 /* footer törés */
