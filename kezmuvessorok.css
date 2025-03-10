@@ -48,7 +48,15 @@ body {
 }
 #mangohero
 {
-  margin: 5%;
+  margin: auto;
+}
+@media (min-width: 980px) {
+    
+  #mangohero
+  {
+    margin: 3%;
+  }
+  
 }
  
  
