@@ -474,7 +474,7 @@ li {
 /* footer törés */
 footer {
     background-color: black;
-    padding-top: 1px;
+    padding: 1px 0px 10px 0px;
 }
 
 footer h3 {
@@ -492,6 +492,9 @@ footer h5 {
 .footertelefoncopyrightflex {
     display: flex;
     flex-direction: row;
+    margin: 20px 0px 20px 0px;
+    align-items: center;
+    justify-content: center;
 }
 
 .footertelefon {
@@ -510,6 +513,7 @@ footer h5 {
 .footercopyright {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .footertelefon img {
@@ -518,7 +522,7 @@ footer h5 {
 }
 
 .footertelefon h4 {
-    margin-left: 0px 0px 0px 5px;
+    margin: 0px 0px 0px 5px;
     font-size: 24px;
 }
 
@@ -528,13 +532,14 @@ footer h5 {
 }
 
 .footermail h4 {
-    margin-left: 0px 0px 0px 10px;
+    margin: 0px 0px 0px 10px; /*top right bottom left*/
     font-size: 24px;
 }
 
 .footercopyright img {
     width: 45px;
     height: 20px;
+    padding: 0px 0px 10px 0px;
 }
 
 .footercopyright h5 {
