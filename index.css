@@ -530,12 +530,14 @@ footer h5 {
 .footertelefon {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .footermail {
     display: flex;
     flex-direction: row;
     margin-left: 40px;
+    align-items: center;
 }
 
 .footercopyright {
@@ -549,9 +551,8 @@ footer h5 {
 }
 
 .footertelefon h4 {
-    margin-left: 5px;
+    margin-left: 0px 0px 0px 5px;
     font-size: 24px;
-    margin-bottom: 20px;
 }
 
 .footermail img {
@@ -560,7 +561,7 @@ footer h5 {
 }
 
 .footermail h4 {
-    margin-left: 10px;
+    margin-left: 0px 0px 0px 10px;
     font-size: 24px;
 }
 
@@ -571,9 +572,14 @@ footer h5 {
 
 .footercopyright h5 {
     font-size: 16px;
+    margin: 0px 0px 0px 0px;
 }
 
 .footercim {
     margin-left: 40px;
     font-size: 30px;
+}
+
+.footercim h3 {
+    margin-bottom: 0px;
 }
