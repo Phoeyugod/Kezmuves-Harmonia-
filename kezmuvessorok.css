@@ -256,7 +256,84 @@ body {
       font-size: clamp(14px, 1.6vw, 16px);
   }
 }
+footer {
+  background-color: black;
+  padding-top: 1px;
+}
 
+footer h3 {
+  color: white;
+}
+
+footer h4 {
+  color: white;
+}
+
+footer h5 {
+  color: white;
+}
+
+.footertelefoncopyrightflex {
+  display: flex;
+  flex-direction: row;
+}
+
+.footertelefon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.footermail {
+  display: flex;
+  flex-direction: row;
+  margin-left: 40px;
+  align-items: center;
+}
+
+.footercopyright {
+  display: flex;
+  flex-direction: row;
+}
+
+.footertelefon img {
+  width: 45px;
+  height: 35px;
+}
+
+.footertelefon h4 {
+  margin-left: 0px 0px 0px 5px;
+  font-size: 24px;
+}
+
+.footermail img {
+  width: 45px;
+  height: 45px;
+}
+
+.footermail h4 {
+  margin-left: 0px 0px 0px 10px;
+  font-size: 24px;
+}
+
+.footercopyright img {
+  width: 45px;
+  height: 20px;
+}
+
+.footercopyright h5 {
+  font-size: 16px;
+  margin: 0px 0px 0px 0px;
+}
+
+.footercim {
+  margin-left: 40px;
+  font-size: 30px;
+}
+
+.footercim h3 {
+  margin-bottom: 0px;
+}
 
 
 
