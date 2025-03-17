@@ -3,63 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="kosaroldal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/Képek/logo.png">
     <title>Kézműves Harmónia Webshop</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fff;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        .header {
-            background-color: black;
-            color: white;
-            padding: 15px;
-            font-size: 20px;
-        }
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-top: 20px;
-        }
-        .product {
-            border: 2px solid #ccc;
-            padding: 20px;
-            width: 300px;
-            border-radius: 10px;
-            text-align: center;
-        }
-        .product img {
-            width: 100%;
-            border-radius: 5px;
-        }
-        .footer {
-            background-color: black;
-            color: white;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+
 </head>
-<body>
-    <div class="header">
-        Kézműves Harmónia Webshop
-    </div>
-    <div class="container">
-        <div class="product">
-            <img src="product-image.png" alt="Termék képe">
-            <h2>Termék Neve</h2>
-            <p><strong>Ár:</strong> 3000 Ft</p>
-            <p>Termék részletes leírása.</p>
+<header>
+    <div class="fejlec-ketoszlop">
+        <div class="fejlec-ketoszlop1">
+            <img src="./Képek/logo.png" alt="logo" title="logó">
+        </div>
+        <div class="fejlec-ketoszlop2">
+            <nav>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul>
+                    <li><a href="index.html">Kezdőlap</a></li>
+                    <li><a href="kezmuvessorok.html">Kézműves Sörök</a></li>
+                    <li><a href="alkment.html">Alkohol mentes Sörök</a></li>
+                    <li class="special-bor"><a href="specbor.html">Speciális Borászatok Borai</a></li>
+                </ul>
+            </nav>
+            
         </div>
     </div>
-    <div class="footer">
-        Telefon: +36301711788 | Email: kezmuvesharmonia2024@gmail.com
+</header>
+<body class="irish-grover-regular">
+
+    <div class="container">
+        <div class="product-card">
+            <img id="productImage" src="" alt="Termék képe">
+            <p><strong id="productName"></strong></p>
+        </div>
+        <div class="product-details">
+            <h2 id="productPrice"></h2>
+            <p id="productDescription"></p>
+        </div>
     </div>
+    </div>
+    <footer>
+        <div class="footercim">
+            <h3>Kézműves Harmónia Webshop</h3>
+        </div>
+        <div class="footertelefoncopyrightflex">
+            <div class="footertelefon">
+                <img src="./Képek/telefon_vector.png" alt="">
+                <h4>Telefon: +36301711788</h4>
+            </div>
+            <div class="footermail">
+                <img src="./Képek/mail szimbólum.png" alt="">
+                <h4>Elérhetőség: kezmuvesharmonia2024@gmail.com</h4>
+            </div>
+        </div>
+        <div class="footercopyright">
+            <h5>kézműves harmónia webshop 2024 copyright claim</h5>
+            <img src="./Képek/copyright szimbólum.png" alt="">
+        </div>
+    </footer>
+    <script>
+            document.addEventListener('DOMContentLoaded', function() {
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('name');
+        const image = params.get('image');
+        const price = params.get('price');
+        const description = params.get('description');
+
+        if (name && image && price && description) {
+            document.getElementById('productName').textContent = name;
+            document.getElementById('productImage').src = image;
+            document.getElementById('productPrice').textContent = price;
+            document.getElementById('productDescription').textContent = description;
+        }
+    });
+        document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.fejlec-ketoszlop2 ul');
+
+        hamburger.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+        });
+    });
+    </script>
 </body>
 </html>

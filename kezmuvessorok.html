@@ -145,7 +145,7 @@
         <p>brown</p>
     </div> 
    
-    <div id="mangohero">
+    <div id="mangohero" onclick="goToCart('Ez már sör!', 'Képek/blueberry.png', '1490 Ft', 'Egy finom kézműves sör, amely tökéletes választás minden sörkedvelő számára!')">
         <img class="blueberry" src="Képek/blueberry.png" alt="blueberry">
         <p>blueberry</p>
     </div> 
@@ -170,6 +170,15 @@
     </div> 
 </div>
 <script>
+    function goToCart(name, image, price, description) {
+        const params = new URLSearchParams();
+        params.append('name', name);
+        params.append('image', image);
+        params.append('price', price);
+        params.append('description', description);
+        window.location.href = 'kosaroldal.html?' + params.toString();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
             const hamburger = document.querySelector('.hamburger');
             const navMenu = document.querySelector('.fejlec-ketoszlop2 ul');

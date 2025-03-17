@@ -50,10 +50,12 @@
         </section>
         <div class="best-offer-info-container">
             <section class="best-offer">
-                <div class="card">
+                <div class="card" onclick="goToCart('Ez már sör!', 'Képek/kezdolap sor.png', '1490 Ft', 'Egy finom kézműves sör, amely tökéletes választás minden sörkedvelő számára!')">
                     <img src="Képek/kezdolap sor.png" alt="Best Offer Image" class="card-image">
                     <div class="card-content">
                         <h3>Ez már sör!</h3>
+                    </div>
+                </div>
                     </div>
                 </div>
             </section>
@@ -119,6 +121,16 @@
     </footer>
 
 <script>
+
+    function goToCart(name, image, price, description) {
+        const params = new URLSearchParams();
+        params.append('name', name);
+        params.append('image', image);
+        params.append('price', price);
+        params.append('description', description);
+        window.location.href = 'kosaroldal.html?' + params.toString();
+    }
+
 document.addEventListener('DOMContentLoaded', function() {
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.fejlec-ketoszlop2 ul');
