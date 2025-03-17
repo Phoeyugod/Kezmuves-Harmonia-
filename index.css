@@ -342,6 +342,7 @@ li {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    text-align: right;
 
 
 }
@@ -500,6 +501,13 @@ li {
         font-size: clamp(14px, 1.6vw, 16px);
     }
 }
+@media (max-width:  850px) {
+    .fejlec-ketoszlop2 {
+        font-size: 20px;
+    }
+
+}
+
 
 
 

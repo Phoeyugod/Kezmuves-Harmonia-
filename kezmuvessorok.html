@@ -169,7 +169,33 @@
         <p>napkincs</p>
     </div> 
 </div>
-
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.fejlec-ketoszlop2 ul');
+    
+            hamburger.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+        });
+    
+            function closeModal()
+             {
+        document.getElementById('contactModal').style.display = 'none';
+            }
+            var modal = document.getElementById("contactModal");
+            var btn = document.getElementById("contactButton");
+    
+            btn.onclick = function() {
+            modal.style.display = "block";
+            }
+    
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            closeModal();
+        }
+        }
+    </script>
 
 
 
