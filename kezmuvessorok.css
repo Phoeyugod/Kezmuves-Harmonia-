@@ -30,7 +30,7 @@ body {
   gap: 20px;
 
 }
-.sor1:hover
+#mangohero:hover
 {
   transform: scale(1.05);
   cursor: pointer;
