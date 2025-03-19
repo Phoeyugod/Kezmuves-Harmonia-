@@ -596,3 +596,35 @@ footer h5 {
 .footercim h3 {
     margin-bottom: 0px;
 }
+
+@media (max-width: 940px) {
+    
+}
+@media (max-width: 850px) {
+    .footertelefoncopyrightflex {
+        flex-direction: column;
+        align-items: unset;
+        justify-content: unset;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .footercopyright {
+        justify-content: unset;
+        margin-left: 155px;
+        padding-top: 10px;
+    }
+
+    .footermail, .footertelefon {
+        margin-left: 100px;
+        padding-top: 10px;
+    }
+}
+@media (max-width: 710px) {
+    .footercopyright {
+        margin-left: 90px;
+    }
+
+    .footermail, .footertelefon {
+        margin-left: 45px;
+    }
+}
