@@ -21,6 +21,11 @@ body {
     font-size: 31px;
     text-align: center;
   }
+  #mangohero:hover
+{
+  transform: scale(1.05);
+  cursor: pointer;
+}
    
    
   .sor1 {
