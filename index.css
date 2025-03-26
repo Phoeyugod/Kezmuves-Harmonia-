@@ -598,7 +598,20 @@ footer h5 {
 }
 
 @media (max-width: 940px) {
-    
+    .footertelefon h4, .footermail h4 {
+        font-size: 21.5px;
+    }
+    .footercopyright h5 {
+        font-size: 15px;
+    }
+    .footermail img {
+        width: 35px;
+        height: 35px;
+    }
+    .footercopyright img {
+        width: 35px;
+        height: 15px;
+    }
 }
 @media (max-width: 850px) {
     .footertelefoncopyrightflex {
@@ -610,21 +623,54 @@ footer h5 {
 
     .footercopyright {
         justify-content: unset;
-        margin-left: 155px;
+        margin-left: 200px;
         padding-top: 10px;
     }
 
     .footermail, .footertelefon {
-        margin-left: 100px;
+        margin-left: 150px;
         padding-top: 10px;
     }
+
+    .footertelefon h4, .footermail h4 {
+        font-size: 20px;
+    }
 }
-@media (max-width: 710px) {
+@media (max-width:760px) {
+    .footercopyright {
+        justify-content: unset;
+        margin-left: 140px;
+    }
+
+    .footermail, .footertelefon {
+        margin-left: 105px;
+    }
+}
+@media (max-width:710px) {
     .footercopyright {
         margin-left: 90px;
     }
 
     .footermail, .footertelefon {
         margin-left: 45px;
+    }
+}
+@media (max-width:600px) {
+    .footercim {
+        font-size: 24px;
+        text-align: center;
+        margin-left: 0px;
+    }
+    .footertelefoncopyrightflex {
+        align-items: center;
+        justify-content: center;
+    }
+    .footercopyright {
+        margin-left: 0px;
+        justify-content: center;
+    }
+
+    .footermail, .footertelefon {
+        margin-left: 0px;
     }
 }
