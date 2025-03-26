@@ -1,3 +1,9 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
 *{
     font-family: "Irish Grover", serif;
     font-weight: 400;
@@ -30,11 +36,10 @@ body {
     font-size: 18px;
 }
 .container {
+    flex: 1;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 50px;
+    justify-content: center;
+    align-items: center;
 }
 .product-card {
     display: flex;
@@ -48,8 +53,9 @@ body {
     text-align: center;
 }
 .product-card img {
-    width: 100%;
-    height: auto;
+    width: 250px; /* Fix szélesség */
+    height: 250px; /* Fix magasság */
+    object-fit: contain; /* A kép kitölti a teret torzítás nélkül */
     border-radius: 5px;
 }
 .product-details {
@@ -66,9 +72,8 @@ body {
     color: white;
     text-align: center;
     padding: 15px;
-    position: fixed;
-    bottom: 0;
     width: 100%;
+    margin-top: auto;
 }
 .fejlec-ketoszlop2 ul {
     list-style-type: none;
