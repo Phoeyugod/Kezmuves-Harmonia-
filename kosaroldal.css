@@ -51,10 +51,11 @@ body {
     background: white;
     width: 250px;
     text-align: center;
+    margin-left: 30px;
 }
 .product-card img {
-    width: 250px; /* Fix szélesség */
-    height: 250px; /* Fix magasság */
+    width: 300px; /* Fix szélesség */
+    height: 300px; /* Fix magasság */
     object-fit: contain; /* A kép kitölti a teret torzítás nélkül */
     border-radius: 5px;
 }
@@ -62,6 +63,7 @@ body {
     margin-left: 50px;
     flex-grow: 1;
     font-size: 20px;
+    margin-bottom: 250px;
 }
 .product-details h2 {
     font-size: 24px;
