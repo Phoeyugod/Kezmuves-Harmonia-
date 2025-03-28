@@ -61,6 +61,11 @@ body {
    
    
   }
+  #mangohero:hover
+{
+  transform: scale(1.05);
+  cursor: pointer;
+}
   @media (min-width: 980px) {
     
     #mangohero
