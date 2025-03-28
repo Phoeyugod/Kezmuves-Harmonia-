@@ -41,15 +41,15 @@
         </div>
         </div>
         <div class="wine-container">
-            <div class="wine-item">
+            <div class="wine-item" onclick="goToCart('Muzeális Arany metszés', 'Képek/muzealisaranymetszes.png', '1490 Ft', 'Egy finom kézműves sör, amely tökéletes választás minden sörkedvelő számára!')">
                 <img src="/Képek/muzealisaranymetszes.png" alt="Muzeális Arany metszés">
                 <div class="wine-name">Muzeális Arany metszés</div>
             </div>
-            <div class="wine-item">
+            <div class="wine-item" onclick="goToCart('Furmint', 'Képek/furmint.png', '1490 Ft', 'Egy finom kézműves sör, amely tökéletes választás minden sörkedvelő számára!')">
                 <img style="object-fit:contain;" src="/Képek/furmint.png" alt="Furmint">
                 <div class="wine-name">Furmint</div>
             </div>
-            <div class="wine-item">
+            <div class="wine-item" onclick="goToCart('Jégbor', 'Képek/jegbor.png', '1490 Ft', 'Egy finom kézműves sör, amely tökéletes választás minden sörkedvelő számára!')">
                 <img src="/Képek/jegbor.png" alt="Jégbor">
                 <div class="wine-name">Jégbor</div>
             </div>
@@ -61,15 +61,15 @@
         <h2 class="gradient-text">Syrah</h2>
     </div>
         <div class="wine-container">
-            <div class="wine-item">
+            <div class="wine-item" onclick="goToCart('PSTITE PETIT', 'Képek/pstttepetit.png', '1490 Ft', 'Egy finom kézműves sör, amely tökéletes választás minden sörkedvelő számára!')">
                 <img  src="/Képek/pstttepetit.png" alt="PSTITE PETIT">
                 <div class="wine-name">PSTITE PETIT</div>
             </div>
-            <div class="wine-item">
+            <div class="wine-item" onclick="goToCart('899 Syrah', 'Képek/899syrah.png', '1490 Ft', 'Egy finom kézműves sör, amely tökéletes választás minden sörkedvelő számára!')">
                 <img src="/Képek/899syrah.png" alt="899 Syrah">
                 <div class="wine-name">899 Syrah</div>
             </div>
-            <div class="wine-item">
+            <div class="wine-item" onclick="goToCart('Petite Sirah', 'Képek/petitesirah.png', '1490 Ft', 'Egy finom kézműves sör, amely tökéletes választás minden sörkedvelő számára!')">
                 <img style="object-fit:contain;" src="/Képek/petitesirah.png" alt="Petite Sirah">
                 <div class="wine-name">Petite Sirah</div>
             </div>
@@ -81,21 +81,29 @@
         <h2 class="gradient-text">Tenuta Greppo</h2>
         </div>
         <div class="wine-container">
-            <div class="wine-item">
+            <div class="wine-item" onclick="goToCart('Brunello', 'Képek/brunello.png', '1490 Ft', 'Egy finom kézműves sör, amely tökéletes választás minden sörkedvelő számára!')">
                 <img style="object-fit:contain;" src="/Képek/brunello.png" alt="Brunello">
                 <div class="wine-name">Brunello</div>
             </div>
-            <div class="wine-item">
+            <div class="wine-item" onclick="goToCart('Sassicaia', 'Képek/sassisaciah.png', '1490 Ft', 'Egy finom kézműves sör, amely tökéletes választás minden sörkedvelő számára!')">
                 <img src="/Képek/sassisaciah.png" alt="Sassicaia">
                 <div class="wine-name">Sassicaia</div>
             </div>
-            <div class="wine-item">
+            <div class="wine-item" onclick="goToCart('Montes Taita', 'Képek/montestaita.png', '1490 Ft', 'Egy finom kézműves sör, amely tökéletes választás minden sörkedvelő számára!')">
                 <img style="object-fit:contain;" src="/Képek/montestaita.png" alt="Montes Taita">
                 <div class="wine-name">Montes Taita</div>
             </div>
         </div>
     </div>
     <script>
+        function goToCart(name, image, price, description) {
+        const params = new URLSearchParams();
+        params.append('name', name);
+        params.append('image', image);
+        params.append('price', price);
+        params.append('description', description);
+        window.location.href = 'kosaroldal.html?' + params.toString();
+    }
         document.addEventListener('DOMContentLoaded', function() {
                 const hamburger = document.querySelector('.hamburger');
                 const navMenu = document.querySelector('.fejlec-ketoszlop2 ul');
