@@ -15,6 +15,10 @@ body {
     margin: auto;
 }
 
+.container p {
+    font-size: 30px;
+}
+
 
 header .logo img {
     width: 150px;
@@ -101,6 +105,8 @@ li {
 }
 .gradient-text2 {
     background-image: linear-gradient(to right, rgb(226 204 157), #fff, rgb(187 96 3));
+    text-indent: 10px; 
+    font-size: 64px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-background-clip: text;
@@ -108,6 +114,10 @@ li {
 }
 .gradient-text3 {
     background-image: linear-gradient(to right,#fff 10%, rgb(197 0 0)40%);
+    padding-left: 0px;
+    text-align: left; 
+    text-indent: 25px; 
+    font-size: 50px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-background-clip: text;
@@ -115,10 +125,38 @@ li {
 }
 .gradient-text4 {
     background-image: linear-gradient(to right,#fff 20%, rgb(197 0 0));
+    text-align: right; 
+    font-size: 50px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
+}
+.column ul {
+    font-size: 36px; 
+    color: white;
+}
+.p2 {
+    text-align: center; 
+    font-size: 50px; 
+    color:white
+}
+.button2 {
+    text-align: left; 
+    margin-top: 20px; 
+    margin-left: 50px;
+}
+.button2 button {
+    font-size: 30px; 
+    color: white; 
+    background-color: rgba(255, 255, 255,0.4); 
+    border: solid 2px black; 
+    border-radius: 60px; 
+    cursor: pointer;
+}
+.szurkehatter p {
+    text-align: center; 
+    font-size: 40px;
 }
 .gradient-text5 {
     background-image: linear-gradient(to right,rgb(197 0 0) 20%, rgb(102 102 102));
