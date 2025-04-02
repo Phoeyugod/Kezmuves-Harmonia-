@@ -117,6 +117,176 @@ body {
 .special-bor {
     white-space: nowrap; 
 }
+/* Vásárlás gomb stílus */
+.buy-button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    padding: 14px 30px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 10px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden; /* A gomb körüli overflow elrejtése */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.buy-button:hover {
+    background-color: #868686;
+}
+
+/* Modális ablak stílus */
+.modal {
+    display: none; /* Rejtett alapértelmezetten */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0); /* Félátlátszó háttér */
+    background-color: rgba(0, 0, 0, 0.4); /* Sötét háttér */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #c7d8c8;
+}
+/* Gomb hover állapot */
+.buy-button:hover {
+    background-color: #adadad; /* Kattintásra színváltozás */
+    transform: scale(1.1) rotate(4deg); /* Nagyítás és enyhe forgatás */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Erősebb árnyék */
+    animation: glow 1.5s infinite alternate; /* Fényesítés animáció */
+}
+
+/* Kattintás állapot - visszapattanó effekt */
+.buy-button:active {
+    transform: scale(0.95) rotate(-4deg); /* Pattanó effekt */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Kisebb árnyék */
+}
+
+/* Fényesítés animáció */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.6), 0 0 20px 8px rgba(255, 255, 255, 0.2);
+        transform: scale(1.1);
+    }
+    50% {
+        box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.9), 0 0 30px 10px rgba(255, 255, 255, 0.5);
+        transform: scale(1.1) rotate(4deg);
+    }
+    100% {
+        box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.6), 0 0 20px 8px rgba(255, 255, 255, 0.2);
+        transform: scale(1.1) rotate(-4deg);
+    }
+}
+
+/* Finom csík animáció - háttérben */
+.buy-button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(0, 255, 0, 0.3)); /* Lendületes csíkos háttér */
+    z-index: -1;
+    transform: scaleX(1.5) scaleY(1.5);
+    animation: stripe 2s linear infinite;
+    opacity: 0;
+}
+
+/* Animáció a csíkok mozgásához */
+@keyframes stripe {
+    0% {
+        transform: translateX(-100%) rotate(30deg);
+    }
+    50% {
+        transform: translateX(100%) rotate(30deg);
+    }
+    100% {
+        transform: translateX(-100%) rotate(30deg);
+    }
+}
+
+/* További effekt - mágneses hover */
+.buy-button:hover:after {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    animation: magnet 1s ease-in-out infinite;
+    opacity: 0;
+}
+
+/* Mágneses animáció */
+@keyframes magnet {
+    0% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 0;
+    }
+}
 /* fejlec törés */
 .fejlec-ketoszlop2 li {
 
