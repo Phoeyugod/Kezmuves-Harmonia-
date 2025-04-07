@@ -14,7 +14,7 @@ body {
  
 .cimsor1 {
   background-color: rgba(255, 255, 255, 0.4);
-  width: 90%;
+ 
   margin: 5% auto;
   padding: 20px;
   border-radius: 50px;
@@ -156,7 +156,7 @@ body {
 
 .fejlec-ketoszlop1 {
   flex: calc(10%);
-  padding-left: 10px;
+  text-align: left;
   background-color: black !important;
 }
 
