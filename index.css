@@ -126,14 +126,14 @@ li {
 .gradient-text4 {
     background-image: linear-gradient(to right,#fff 20%, rgb(197 0 0));
     text-align: right; 
-    font-size: 40px;
+    font-size: 38px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
 }
 .column ul {
-    font-size: 32px; 
+    font-size: 30px; 
     color: white;
 }
 .p2 {
@@ -141,10 +141,12 @@ li {
     font-size: 36px; 
     color:white
 }
+.p2 p {
+    margin: 60px 0px 40px 0px;
+}
 .button2 {
     text-align: left; 
-    margin-top: 20px; 
-    margin-left: 50px;
+    margin: 20px 0px 25px 50px;
 }
 .button2 button {
     font-size: 30px; 
@@ -167,12 +169,11 @@ li {
     -moz-text-fill-color: transparent;
 }
 .best-offer {
-    padding: 20px;
     display: flex;
     justify-content: flex-start;
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 30px;
     padding: 0px 0px 0px 0px;
-    flex: 1;
+    flex: 2;
 }
 
 .card {
@@ -184,8 +185,8 @@ li {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
     background-color: rgba(255, 255, 255,0.4);
-    margin-left: 10%;
     cursor: pointer;
+    padding: 30px 50px 0px 50px;
 }
 
 .card:hover {
@@ -214,16 +215,11 @@ li {
     justify-content: space-between;
     position: relative;
 }
-/*@media (max-width:850px) {
+@media (max-width:850px) {
     .best-offer-info-container {
         flex-direction: column;
     }
-}*/
-
-.best-offer {
-    flex: 2;
-    margin-right: 20px;
-    margin-left: 3%;
+    
 }
 
 @media (max-width: 768px) {
@@ -279,7 +275,7 @@ li {
             background-color: rgba(255, 255, 255,0.2);
             border-radius: 60px;
             padding: 20px;
-            margin: 20px;
+            margin: 20px 20px 30px 20px;
         }
         .contactmodal {
     display: none;
