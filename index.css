@@ -96,6 +96,7 @@ li {
     -webkit-text-fill-color: transparent; 
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #000000;
 }
 .hatter{
     background-image: linear-gradient(rgb(51 0 0), rgb(115 96 91));

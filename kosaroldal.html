@@ -68,6 +68,25 @@
     </div>
 </div>
 
+<div id="shippingModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeShippingModal">&times;</span>
+        <h2>Szállítási Adatok</h2>
+        <form id="shippingForm">
+            <label for="fullName">Teljes név:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="address">Cím:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="phoneNumber">Telefonszám:</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" required>
+
+            <button type="submit" class="submit-btn">Tovább a Bankkártya Adatokhoz</button>
+        </form>
+    </div>
+</div>
+
 
     <footer>
         <div class="footercim">
@@ -89,38 +108,63 @@
         </div>
     </footer>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-    
+document.addEventListener('DOMContentLoaded', function () {
     const buyButton = document.getElementById("buyButton");
     const paymentModal = document.getElementById("paymentModal");
+    const shippingModal = document.getElementById("shippingModal");
     const closeModal = document.getElementById("closeModal");
+    const closeShippingModal = document.getElementById("closeShippingModal");
+    const shippingForm = document.getElementById("shippingForm");
     const paymentForm = document.getElementById("paymentForm");
 
-    
+    // Vásárlás gombra kattintás: először szállítási modal
     buyButton.addEventListener("click", function () {
+        shippingModal.style.display = "block"; 
+    });
+
+    // Szállítási modal bezárása
+    closeShippingModal.addEventListener("click", function () {
+        shippingModal.style.display = "none"; 
+    });
+
+    // Kattintás a modal külső részére
+    window.addEventListener("click", function (event) {
+        if (event.target === shippingModal) {
+            shippingModal.style.display = "none"; 
+        } else if (event.target === paymentModal) {
+            paymentModal.style.display = "none"; 
+        }
+    });
+
+    // Szállítási adatok beküldése: ha sikeres, akkor a bankkártyás modal nyílik
+    shippingForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Ne küldje el a formot
+
+        // Ha a szállítási adatok helyesek
+        alert("Szállítási adatok rögzítve! Most léphet a bankkártya adatokhoz.");
+        
+        // Szállítási modal bezárása
+        shippingModal.style.display = "none"; 
+
+        // Bankkártya modal megnyitása
         paymentModal.style.display = "block"; 
     });
 
-    
+    // Bankkártya modal bezárása
     closeModal.addEventListener("click", function () {
         paymentModal.style.display = "none"; 
     });
 
-    
-    window.addEventListener("click", function (event) {
-        if (event.target === paymentModal) {
-            paymentModal.style.display = "none";
-        }
-    });
-
-    
+    // Bankkártya form beküldése
     paymentForm.addEventListener("submit", function (event) {
-        event.preventDefault(); 
-        alert("A vásárlás sikeres!"); 
-        paymentForm.reset(); 
-        paymentModal.style.display = "none"; 
+        event.preventDefault(); // Ne küldje el a formot
+
+        alert("A vásárlás sikeres!"); // Vásárlás sikeressége
+        paymentForm.reset(); // Űrlap törlés
+        paymentModal.style.display = "none"; // Bezárás
     });
 });
+
 
             document.addEventListener('DOMContentLoaded', function() {
         const params = new URLSearchParams(window.location.search);
