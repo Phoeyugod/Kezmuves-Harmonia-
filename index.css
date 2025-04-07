@@ -107,7 +107,7 @@ li {
 .gradient-text2 {
     background-image: linear-gradient(to right, rgb(226 204 157), #fff, rgb(187 96 3));
     text-indent: 10px; 
-    font-size: 64px;
+    font-size: 50px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-background-clip: text;
@@ -118,7 +118,7 @@ li {
     padding-left: 0px;
     text-align: left; 
     text-indent: 25px; 
-    font-size: 50px;
+    font-size: 40px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-background-clip: text;
@@ -127,19 +127,19 @@ li {
 .gradient-text4 {
     background-image: linear-gradient(to right,#fff 20%, rgb(197 0 0));
     text-align: right; 
-    font-size: 50px;
+    font-size: 40px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
 }
 .column ul {
-    font-size: 36px; 
+    font-size: 32px; 
     color: white;
 }
 .p2 {
     text-align: center; 
-    font-size: 50px; 
+    font-size: 36px; 
     color:white
 }
 .button2 {
@@ -157,7 +157,8 @@ li {
 }
 .szurkehatter p {
     text-align: center; 
-    font-size: 40px;
+    font-size: 32px;
+    margin: 5px 10px 5px 10px;
 }
 .gradient-text5 {
     background-image: linear-gradient(to right,rgb(197 0 0) 20%, rgb(102 102 102));
@@ -170,7 +171,8 @@ li {
     padding: 20px;
     display: flex;
     justify-content: flex-start;
-    margin-bottom: 0;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
     flex: 1;
 }
 
@@ -224,9 +226,6 @@ li {
     margin-right: 20px;
     margin-left: 3%;
 }
-.best-offer, .info {
-    margin: 10px;
-}
 
 @media (max-width: 768px) {
     .best-offer {
@@ -241,6 +240,8 @@ li {
     flex: 3;
     padding: 20px;
     border-radius: 5px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
 }
 .modal {
             display: none;
@@ -425,7 +426,7 @@ li {
 .fejlec-ketoszlop2 a {
     text-decoration: none;
     color: white !important;
-    padding: 5px 10px; 
+    
     display: inline-block; 
     transition: background-color 0.3s ease; 
 }
@@ -439,7 +440,6 @@ li {
 
 .fejlec-ketoszlop1 {
     flex: calc(10%);
-    padding-left: 10px;
     background-color: black !important;
 }
 
