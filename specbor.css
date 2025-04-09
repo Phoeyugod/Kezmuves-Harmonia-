@@ -8,6 +8,10 @@ body {
     padding: 0;
     margin: 0;
 }
+*{
+    font-weight: 400;
+  
+  }
 .section {
     margin: 20px auto;
    
@@ -208,6 +212,7 @@ footer h3 {
 
 footer h4 {
     color: white;
+    text-align: initial;
 }
 
 footer h5 {
