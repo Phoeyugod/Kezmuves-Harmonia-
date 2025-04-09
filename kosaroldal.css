@@ -9,6 +9,7 @@ html, body {
     font-family: "Irish Grover", serif;
     font-weight: 400;
     font-style: normal;
+    
 }
 
 body {
@@ -77,6 +78,40 @@ body {
 .product-details h2 {
     font-size: 24px;
     font-weight: bold;
+
+  }
+@media (max-width: 520px) {
+    .container {
+        flex-direction: column; /* Átváltás oszlopos elrendezésre */
+        align-items: center;
+    }
+    .product-details h2 {
+        margin-left: 150px;
+        text-align: right;
+        margin-right: 10px;
+      }
+
+    .product-card {
+        width: 39%;
+    margin-left: 0;
+    margin-top: 50px;
+
+    }
+    .product-details {
+        font-size: 20px;
+        text-align: left;
+        padding-left: 10px;/* old meg hogy a */
+      }
+
+    .product-details {
+        margin-left: 0; /* Nincs baloldali margó */
+        margin-top: 20px; /* Kis margó a termék kártya alatt */
+    }
+
+    .product-card img {
+        width: 100%; /* A kép szélessége 100% legyen, hogy illeszkedjen a kártyához */
+        height: auto; /* A magasság arányosan változik */
+    }
 }
 
 .footer {
@@ -139,8 +174,8 @@ body {
     margin-top: 20px;
 
     display: inline-block;
-    position: relative;
-    overflow: hidden; /* A gomb körüli overflow elrejtése */
+
+
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     font-weight: bold;
