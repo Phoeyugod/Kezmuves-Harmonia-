@@ -430,6 +430,18 @@ footer h5 {
     }
 }
 
+@media(max-width : 350px)
+{
+    .wine-name{
+        font-size: 1.4em;
+    }
+    h2{
+      font-size: 2.5em;  
+    }
+    
+}
+
+
 @media(max-width:1055px){
     .fejlec-ketoszlop2 ul{
 
