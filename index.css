@@ -98,6 +98,13 @@ li {
     -moz-text-fill-color: transparent;
     -webkit-text-stroke: 1px #000000;
 }
+.container h1 {
+    padding: 0px 10px 0px 10px;
+}
+.container p {
+    font-size: 32.5px;
+    padding: 0px 20px 0px 20px;
+}
 .hatter{
     background-image: linear-gradient(rgb(51 0 0), rgb(115 96 91));
     display: flex;
@@ -148,7 +155,7 @@ li {
 }
 .button2 {
     text-align: left; 
-    margin: 20px 0px 25px 50px;
+    margin: 20px 0px 25px 30px;
 }
 .button2 button {
     font-size: 30px; 
@@ -249,8 +256,42 @@ li {
     }
 }
 
-@media (max-width:600px){
-    
+@media (max-width:600px) {
+    .best-offer {
+        margin-left: 0px;
+    }
+    .card {
+        margin: 0 auto;
+    }
+    .gradient-text4 {
+        text-align: center;
+    }
+    .column ul {
+        padding-left: 0px;
+        text-align: center;
+    }
+    .button2 {
+        margin: 0 auto;
+    }
+    .column {
+        margin: 0;
+        padding: 20px 10px 20px 10px;
+    }
+    .gradient-text4 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width:450px) {
+    .card {
+        padding: 30px 35px 0px 35px;
+    }
+    .about p {
+        font-size: 32px;
+    }
+    .gradient-text3 {
+        text-indent: 15px;
+    }
 }
 
 @media (max-width: 768px) {
