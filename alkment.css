@@ -71,6 +71,7 @@ body {
   transform: scale(1.05);
   cursor: pointer;
 }
+
   @media (min-width: 980px) {
     
     #mangohero
@@ -94,6 +95,20 @@ body {
   }
   
   }
+
+@media(max-width: 350px){
+ .cimsor1
+ {
+   font-size: 25px;
+ }
+ .sor1
+ {
+   font-size: 18px;
+
+ }
+}
+
+
    
    
   @media (max-width: 600px) {
