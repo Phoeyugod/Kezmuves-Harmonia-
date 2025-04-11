@@ -144,6 +144,7 @@ li {
 }
 .p2 p {
     margin: 60px 0px 40px 0px;
+    padding: 0px 10px 0px 10px;
 }
 .button2 {
     text-align: left; 
@@ -216,10 +217,39 @@ li {
     justify-content: space-between;
     position: relative;
 }
+
+@media (max-width:850px) {
+    .gradient-text2 {
+        font-size: 40px;
+    }
+}
 @media (max-width:850px) {
     .best-offer-info-container {
         flex-direction: column;
     }
+
+    .best-offer {
+        margin: 0px 0px 0px 10px;
+    }
+
+    .column ul {
+        padding-left: 200px;
+    }
+
+    .p2 {
+        text-align: left;
+    }
+
+    .gradient-text2 {
+        font-size: 30px;
+    }
+
+    .gradient-text3 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width:600px){
     
 }
 
