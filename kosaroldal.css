@@ -3,6 +3,8 @@ html, body {
     margin: 0;
     display: flex;
     flex-direction: column;
+    
+    
 }
 
 * {
@@ -17,6 +19,7 @@ body {
     background-color: #fff;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .header {
@@ -80,7 +83,7 @@ body {
     font-weight: bold;
 
   }
-@media (max-width: 520px) {
+@media (max-width: 600px) {
     .container {
         flex-direction: column; /* Átváltás oszlopos elrendezésre */
         align-items: center;
@@ -101,6 +104,7 @@ body {
         font-size: 20px;
         text-align: left;
         padding-left: 10px;/* old meg hogy a */
+        padding: 10px;
       }
 
     .product-details {
@@ -505,4 +509,114 @@ footer h5 {
 
 .footercim h3 {
     margin-bottom: 0px;
+}
+@media (max-width: 940px) {
+    .footertelefon h4, .footermail h4 {
+        font-size: 21.5px;
+    }
+    .footercopyright h5 {
+        font-size: 15px;
+    }
+    .footermail img {
+        width: 35px;
+        height: 35px;
+    }
+    .footercopyright img {
+        width: 35px;
+        height: 15px;
+    }
+}
+@media (max-width: 850px) {
+    .footertelefoncopyrightflex {
+        flex-direction: column;
+        align-items: unset;
+        justify-content: unset;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .footercopyright {
+        justify-content: unset;
+        margin-left: 200px;
+        padding-top: 10px;
+    }
+
+    .footermail, .footertelefon {
+        margin-left: 150px;
+        padding-top: 10px;
+    }
+
+    .footertelefon h4, .footermail h4 {
+        font-size: 20px;
+    }
+}
+@media (max-width:760px) {
+    .footercopyright {
+        justify-content: unset;
+        margin-left: 140px;
+    }
+
+    .footermail, .footertelefon {
+        margin-left: 105px;
+    }
+}
+@media (max-width:710px) {
+    .footercopyright {
+        margin-left: 90px;
+    }
+
+    .footermail, .footertelefon {
+        margin-left: 45px;
+    }
+}
+@media (max-width:600px) {
+    .footercim {
+        font-size: 24px;
+        text-align: center;
+        margin-left: 0px;
+    }
+    .footertelefoncopyrightflex {
+        align-items: center;
+        justify-content: center;
+    }
+    .footercopyright {
+        margin-left: 0px;
+        justify-content: center;
+    }
+
+    .footermail, .footertelefon {
+        margin-left: 0px;
+    }
+}
+@media (max-width:470px) {
+    .footertelefon h4, .footermail h4 {
+        font-size: 16px;
+    }
+    .footercopyright h5 {
+        font-size: 11px;
+    }
+    .footercim h3 {
+        font-size: 20px;
+    }
+}
+@media (max-width:470px) {
+    .footertelefon h4, .footermail h4 {
+        font-size: 16px;
+    }
+    .footercopyright h5 {
+        font-size: 11px;
+    }
+    .footercim h3 {
+        font-size: 20px;
+    }
+}
+@media (max-width:390px) {
+    .footertelefon h4, .footermail h4 {
+        font-size: 13px;
+    }
+    .footercopyright h5 {
+        font-size: 10px;
+    }
+    .footercim h3 {
+        font-size: 19px;
+    }
 }
