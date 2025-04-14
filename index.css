@@ -43,12 +43,11 @@ nav ul li a {
 .hero {
     background-image: url(/Képek/kezmuves_harmoniakep.png);
     font-size: 40px;
-
     padding: 400px 0;
     text-align: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+    background-position-x: center;
 }
 .about {
     padding: 20px 0;
@@ -280,6 +279,12 @@ li {
     .gradient-text4 {
         font-size: 32px;
     }
+    .container h1 {
+        font-size: 44px;
+    }
+    .container p {
+        font-size: 22px;
+    }
 }
 
 @media (max-width:450px) {
@@ -291,6 +296,12 @@ li {
     }
     .gradient-text3 {
         text-indent: 15px;
+    }
+    .container h1 {
+        font-size: 34px;
+    }
+    .container p {
+        font-size: 17px;
     }
 }
 
@@ -811,7 +822,7 @@ footer h5 {
 }
 @media (max-width:390px) {
     .footertelefon h4, .footermail h4 {
-        font-size: 13px;
+        font-size: 12px;
     }
     .footercopyright h5 {
         font-size: 10px;
