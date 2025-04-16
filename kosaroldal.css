@@ -103,7 +103,7 @@ body {
     .product-details {
         font-size: 20px;
         text-align: left;
-        padding-left: 10px;/* old meg hogy a */
+        padding-left: 10px;
         padding: 10px;
       }
 
@@ -171,7 +171,7 @@ body {
     background-color: #4CAF50;
     color: white;
     font-size: 18px;
-    padding: 14px 30px;
+    padding: 7px 30px;
     border: 2px solid transparent;
     border-radius: 8px;
     cursor: pointer;
@@ -227,7 +227,10 @@ body {
     cursor: pointer;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="tel"],
+input[type="password"],
+input[type="email"] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -235,6 +238,7 @@ input[type="text"] {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
+
 
 .submit-btn {
     background-color: #4CAF50;

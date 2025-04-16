@@ -55,13 +55,18 @@
         <h2>Bankkártya Adatok</h2>
         <form id="paymentForm">
             <label for="cardNumber">Kártyaszám:</label>
-            <input type="text" id="cardNumber" name="cardNumber" required>
+            <input type="text"
+                   id="cardNumber"
+                   name="cardNumber"
+                   placeholder="XXXX-XXXX-XXXX-XXXX"
+                   title="Add meg a 16 számjegyű kártyaszámot kötőjelekkel: XXXX-XXXX-XXXX-XXXX"
+                   required>
 
             <label for="expiryDate">Lejárat:</label>
-            <input type="text" id="expiryDate" name="expiryDate" required>
+            <input type="text" id="expiryDate" name="expiryDate" pattern="(0[1-9]|1[0-2])\/\d{2}" placeholder="MM/YY" required>
 
             <label for="cvv">CVV:</label>
-            <input type="text" id="cvv" name="cvv" required>
+            <input type="text" id="cvv" name="cvv" pattern="\d{3}" inputmode="numeric" maxlength="3" required>
 
             <button type="submit" class="submit-btn">Azonnali Vásárlás</button>
         </form>
@@ -74,13 +79,21 @@
         <h2>Szállítási Adatok</h2>
         <form id="shippingForm">
             <label for="fullName">Teljes név:</label>
-            <input type="text" id="fullName" name="fullName" required>
+            <input type="text" id="fullName" name="fullName" pattern="^[A-Za-zÁÉÍÓÖŐÚÜŰáéíóöőúüű\s\-]{2,}$" title="Kérlek, csak betűket írj be!" required>
 
             <label for="address">Cím:</label>
-            <input type="text" id="address" name="address" required>
+            <input type="text" id="address" name="address" 
+                pattern="^[A-Za-zÁÉÍÓÖŐÚÜŰáéíóöőúüű0-9\s\-,/]{5,}$" 
+                title="Pl.: Fő utca 12, Budapest" required>
 
-            <label for="phoneNumber">Telefonszám:</label>
-            <input type="text" id="phoneNumber" name="phoneNumber" required>
+                <label for="phoneNumber">Telefonszám:</label>
+                <input type="tel"
+                       id="phoneNumber"
+                       name="phoneNumber"
+                       placeholder="+36/70 701-8674"
+                       title="Kérlek, adj meg egy érvényes magyar számot: +36/30 000-0000"
+                       required>
+                
 
             <button type="submit" class="submit-btn">Tovább a Bankkártya Adatokhoz</button>
         </form>
@@ -108,6 +121,74 @@
         </div>
     </footer>
     <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const cardInput = document.getElementById("cardNumber");
+
+    cardInput.addEventListener("input", function () {
+        let digits = this.value.replace(/\D/g, ""); // csak számok maradnak
+
+        // Limitáljuk a hosszát 16 számjegyre
+        if (digits.length > 16) {
+            digits = digits.slice(0, 16);
+        }
+
+        // Formázás: XXXX-XXXX-XXXX-XXXX
+        const formatted = digits.replace(/(\d{4})(?=\d)/g, "$1-");
+
+        this.value = formatted;
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const phoneInput = document.getElementById("phoneNumber");
+
+    phoneInput.addEventListener("input", function () {
+        let digits = this.value.replace(/\D/g, ""); // Csak számokat hagyunk meg
+
+        // Ha kevesebb mint 11 szám van, nem formázunk teljesen
+        if (digits.length < 11) {
+            this.value = digits;
+            return;
+        }
+
+        // Példa: 36707018674 → +36/70 701-8674
+        const countryCode = digits.slice(0, 2); // 36
+        const prefix = digits.slice(2, 4);      // 70
+        const firstPart = digits.slice(4, 7);   // 701
+        const secondPart = digits.slice(7, 11); // 8674
+
+        this.value = `+${countryCode}/${prefix} ${firstPart}-${secondPart}`;
+    });
+});
+    document.addEventListener('DOMContentLoaded', function () {
+    const cardNumber = document.getElementById("cardNumber");
+    const cvv = document.getElementById("cvv");
+    const fullName = document.getElementById("fullName");
+    const expiryDate = document.getElementById("expiryDate");
+
+    // Csak szám engedélyezése
+    [cardNumber, cvv].forEach(input => {
+        input.addEventListener("input", function () {
+            this.value = this.value.replace(/\D/g, ""); // Nem szám karakterek törlése
+        });
+    });
+
+    // Teljes név mező - csak betűk, szóköz, kötőjel
+    fullName.addEventListener("input", function () {
+        this.value = this.value.replace(/[0-9]/g, ""); // Szám törlése
+    });
+
+    // Lejárat formázás: MM/YY
+    expiryDate.addEventListener("input", function () {
+        let value = this.value.replace(/[^\d]/g, "");
+
+        if (value.length >= 3) {
+            this.value = value.slice(0, 2) + "/" + value.slice(2, 4);
+        } else {
+            this.value = value;
+        }
+    });
+});
 document.addEventListener('DOMContentLoaded', function () {
     const buyButton = document.getElementById("buyButton");
     const paymentModal = document.getElementById("paymentModal");
