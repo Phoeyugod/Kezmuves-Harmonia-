@@ -590,21 +590,13 @@ footer h5 {
     .footermail, .footertelefon {
         margin-left: 0px;
     }
-}
-@media (max-width:470px) {
     .footertelefon h4, .footermail h4 {
-        font-size: 16px;
-    }
-    .footercopyright h5 {
-        font-size: 11px;
-    }
-    .footercim h3 {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 @media (max-width:470px) {
     .footertelefon h4, .footermail h4 {
-        font-size: 16px;
+        font-size: 14.5px;
     }
     .footercopyright h5 {
         font-size: 11px;
