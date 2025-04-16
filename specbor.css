@@ -208,6 +208,7 @@ footer {
 
 footer h3 {
     color: white;
+    text-align: left;
 }
 
 footer h4 {
@@ -364,21 +365,13 @@ footer h5 {
     .footermail, .footertelefon {
         margin-left: 0px;
     }
+    .footertelefon h4, .footermail h4 {
+        font-size: 18px;
+      }
 }
 @media (max-width:470px) {
     .footertelefon h4, .footermail h4 {
-        font-size: 16px;
-    }
-    .footercopyright h5 {
-        font-size: 11px;
-    }
-    .footercim h3 {
-        font-size: 20px;
-    }
-}
-@media (max-width:470px) {
-    .footertelefon h4, .footermail h4 {
-        font-size: 16px;
+        font-size: 15px;
     }
     .footercopyright h5 {
         font-size: 11px;
