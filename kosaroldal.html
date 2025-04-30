@@ -55,12 +55,7 @@
         <h2>Bankkártya Adatok</h2>
         <form id="paymentForm">
             <label for="cardNumber">Kártyaszám:</label>
-            <input type="text"
-                   id="cardNumber"
-                   name="cardNumber"
-                   placeholder="XXXX-XXXX-XXXX-XXXX"
-                   title="Add meg a 16 számjegyű kártyaszámot kötőjelekkel: XXXX-XXXX-XXXX-XXXX"
-                   required>
+            <input type="text" id="cardNumber" maxlength="19" placeholder="XXXX-XXXX-XXXX-XXXX">
 
             <label for="expiryDate">Lejárat:</label>
             <input type="text" id="expiryDate" name="expiryDate" pattern="(0[1-9]|1[0-2])\/\d{2}" placeholder="MM/YY" required>
@@ -121,23 +116,20 @@
         </div>
     </footer>
     <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const cardInput = document.getElementById("cardNumber");
+        document.addEventListener("DOMContentLoaded", function () {
+            const cardInput = document.getElementById("cardNumber");
 
-    cardInput.addEventListener("input", function () {
-        let digits = this.value.replace(/\D/g, ""); // csak számok maradnak
+            cardInput.addEventListener("input", function () {
+                let digits = this.value.replace(/\D/g, ""); // Csak számokat hagyunk meg
 
-        // Limitáljuk a hosszát 16 számjegyre
-        if (digits.length > 16) {
-            digits = digits.slice(0, 16);
-        }
+                // Ha kevesebb mint 16 szám van, nem formázunk teljesen
+                if (digits.length <= 16) {
+                    let formatted = digits.replace(/(\d{4})(?=\d)/g, '$1-'); // Minden 4 szám után kötőjel
 
-        // Formázás: XXXX-XXXX-XXXX-XXXX
-        const formatted = digits.replace(/(\d{4})(?=\d)/g, "$1-");
-
-        this.value = formatted;
-    });
-});
+                    this.value = formatted; // A formázott érték beállítása
+                }
+            });
+        });
 
 document.addEventListener("DOMContentLoaded", function () {
     const phoneInput = document.getElementById("phoneNumber");
@@ -167,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const expiryDate = document.getElementById("expiryDate");
 
     // Csak szám engedélyezése
-    [cardNumber, cvv].forEach(input => {
+    [, cvv].forEach(input => {
         input.addEventListener("input", function () {
             this.value = this.value.replace(/\D/g, ""); // Nem szám karakterek törlése
         });
@@ -179,6 +171,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Lejárat formázás: MM/YY
+
+    document.addEventListener('DOMContentLoaded', function () {
+    const expiryDate = document.getElementById("expiryDate");
+    const paymentForm = document.getElementById("paymentForm");
+
     expiryDate.addEventListener("input", function () {
         let value = this.value.replace(/[^\d]/g, "");
 
@@ -187,8 +184,33 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             this.value = value;
         }
+     
+
+    paymentForm.addEventListener("submit", function (event) {
+        const expiryValue = expiryDate.value;
+        const [month, year] = expiryValue.split("/");
+
+        const currentYear = new Date().getFullYear() % 100; // Jelenlegi év kétjegyű része
+        const currentMonth = new Date().getMonth() + 1; // Jelenlegi hónap (0-tól kezdődően)
+
+        // Év validálása: minimum 25-nek kell lennie
+        if (parseInt(year) < 25 || (parseInt(year) === 25 && parseInt(month) < currentMonth)) {
+            alert("A lejárat dátuma nem lehet kisebb, mint 25.");
+            event.preventDefault(); // Megakadályozza a form beküldését
+            return;
+        }
+
+        // Hónap validálása: 01-12 között kell lennie
+        if (parseInt(month) < 1 || parseInt(month) > 12) {
+            alert("A hónapnak 01 és 12 között kell lennie.");
+            event.preventDefault(); // Megakadályozza a form beküldését
+            return;
+        }
+     });
     });
 });
+});
+
 document.addEventListener('DOMContentLoaded', function () {
     const buyButton = document.getElementById("buyButton");
     const paymentModal = document.getElementById("paymentModal");
