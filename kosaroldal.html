@@ -116,6 +116,18 @@
         </div>
     </footer>
     <script>
+
+expiryDate.addEventListener("input", function () {
+        let value = this.value.replace(/[^\d]/g, "");
+
+        if (value.length >= 3) {
+            this.value = value.slice(0, 2) + "/" + value.slice(2, 4);
+        } else {
+            this.value = value;
+        }
+
+     });
+
         document.addEventListener("DOMContentLoaded", function () {
             const cardInput = document.getElementById("cardNumber");
 
@@ -176,39 +188,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const expiryDate = document.getElementById("expiryDate");
     const paymentForm = document.getElementById("paymentForm");
 
-    expiryDate.addEventListener("input", function () {
-        let value = this.value.replace(/[^\d]/g, "");
 
-        if (value.length >= 3) {
-            this.value = value.slice(0, 2) + "/" + value.slice(2, 4);
-        } else {
-            this.value = value;
-        }
-     
-
-    paymentForm.addEventListener("submit", function (event) {
-        const expiryValue = expiryDate.value;
-        const [month, year] = expiryValue.split("/");
-
-        const currentYear = new Date().getFullYear() % 100; // Jelenlegi év kétjegyű része
-        const currentMonth = new Date().getMonth() + 1; // Jelenlegi hónap (0-tól kezdődően)
-
-        // Év validálása: minimum 25-nek kell lennie
-        if (parseInt(year) < 25 || (parseInt(year) === 25 && parseInt(month) < currentMonth)) {
-            alert("A lejárat dátuma nem lehet kisebb, mint 25.");
-            event.preventDefault(); // Megakadályozza a form beküldését
-            return;
-        }
-
-        // Hónap validálása: 01-12 között kell lennie
-        if (parseInt(month) < 1 || parseInt(month) > 12) {
-            alert("A hónapnak 01 és 12 között kell lennie.");
-            event.preventDefault(); // Megakadályozza a form beküldését
-            return;
-        }
-     });
     });
-});
 });
 
 document.addEventListener('DOMContentLoaded', function () {

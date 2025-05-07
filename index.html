@@ -12,7 +12,15 @@
 
 </head>
 <body class="irish-grover-regular">
-
+    <div id="ageModal" class="age-modal">
+        <div class="age-modal-content">
+            <h2>Elmúltál már 18 éves?</h2>
+            <div class="age-modal-buttons">
+                <button onclick="confirmAge(true)">Igen</button>
+                <button onclick="confirmAge(false)">Nem</button>
+            </div>
+        </div>
+    </div>
     <header>
         <div class="fejlec-ketoszlop">
             <div class="fejlec-ketoszlop1">
@@ -120,6 +128,21 @@
     </footer>
 
 <script>
+
+    window.onload = function () {
+        document.body.style.overflow = "hidden"; // ne lehessen scrollozni
+        document.getElementById("ageModal").style.display = "flex";
+    };
+
+    function confirmAge(isAdult) {
+        if (!isAdult) {
+            window.location.href = "https://www.cartoonnetwork.co.uk/";
+        } else {
+            document.getElementById("ageModal").style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    }
+
 
     function goToCart(name, image, price, description) {
         const params = new URLSearchParams();
