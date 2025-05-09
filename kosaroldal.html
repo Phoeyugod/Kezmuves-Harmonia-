@@ -55,12 +55,7 @@
         <h2>Bankkártya Adatok</h2>
         <form id="paymentForm">
             <label for="cardNumber">Kártyaszám:</label>
-            <input type="text"
-                   id="cardNumber"
-                   name="cardNumber"
-                   placeholder="XXXX-XXXX-XXXX-XXXX"
-                   title="Add meg a 16 számjegyű kártyaszámot kötőjelekkel: XXXX-XXXX-XXXX-XXXX"
-                   required>
+            <input type="text" id="cardNumber" maxlength="19" placeholder="XXXX-XXXX-XXXX-XXXX">
 
             <label for="expiryDate">Lejárat:</label>
             <input type="text" id="expiryDate" name="expiryDate" pattern="(0[1-9]|1[0-2])\/\d{2}" placeholder="MM/YY" required>
@@ -121,23 +116,32 @@
         </div>
     </footer>
     <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const cardInput = document.getElementById("cardNumber");
 
-    cardInput.addEventListener("input", function () {
-        let digits = this.value.replace(/\D/g, ""); // csak számok maradnak
+expiryDate.addEventListener("input", function () {
+        let value = this.value.replace(/[^\d]/g, "");
 
-        // Limitáljuk a hosszát 16 számjegyre
-        if (digits.length > 16) {
-            digits = digits.slice(0, 16);
+        if (value.length >= 3) {
+            this.value = value.slice(0, 2) + "/" + value.slice(2, 4);
+        } else {
+            this.value = value;
         }
 
-        // Formázás: XXXX-XXXX-XXXX-XXXX
-        const formatted = digits.replace(/(\d{4})(?=\d)/g, "$1-");
+     });
 
-        this.value = formatted;
-    });
-});
+        document.addEventListener("DOMContentLoaded", function () {
+            const cardInput = document.getElementById("cardNumber");
+
+            cardInput.addEventListener("input", function () {
+                let digits = this.value.replace(/\D/g, ""); // Csak számokat hagyunk meg
+
+                // Ha kevesebb mint 16 szám van, nem formázunk teljesen
+                if (digits.length <= 16) {
+                    let formatted = digits.replace(/(\d{4})(?=\d)/g, '$1-'); // Minden 4 szám után kötőjel
+
+                    this.value = formatted; // A formázott érték beállítása
+                }
+            });
+        });
 
 document.addEventListener("DOMContentLoaded", function () {
     const phoneInput = document.getElementById("phoneNumber");
@@ -167,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const expiryDate = document.getElementById("expiryDate");
 
     // Csak szám engedélyezése
-    [cardNumber, cvv].forEach(input => {
+    [, cvv].forEach(input => {
         input.addEventListener("input", function () {
             this.value = this.value.replace(/\D/g, ""); // Nem szám karakterek törlése
         });
@@ -179,16 +183,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Lejárat formázás: MM/YY
-    expiryDate.addEventListener("input", function () {
-        let value = this.value.replace(/[^\d]/g, "");
 
-        if (value.length >= 3) {
-            this.value = value.slice(0, 2) + "/" + value.slice(2, 4);
-        } else {
-            this.value = value;
-        }
+    document.addEventListener('DOMContentLoaded', function () {
+    const expiryDate = document.getElementById("expiryDate");
+    const paymentForm = document.getElementById("paymentForm");
+
+
     });
 });
+
 document.addEventListener('DOMContentLoaded', function () {
     const buyButton = document.getElementById("buyButton");
     const paymentModal = document.getElementById("paymentModal");
