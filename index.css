@@ -704,8 +704,8 @@ li {
 
 
 
-/* footer törés */
-footer {
+/* footer törés */ /*több sorba tördelést meg kell csinálni, betűméretet állítani*/
+footer { 
     background-color: black;
     padding: 1px 0px 10px 0px;
 }
