@@ -447,7 +447,7 @@ li {
 
 .contactmodal-input::placeholder {
     color: black;
-    font-weight: bold;
+    font-size: larger;
     
 }
 
@@ -589,6 +589,34 @@ li {
     transition: 0.3s;
 }
 
+@media (max-width: 600px) {
+    .contactmodal-content {
+        width: 70%;
+        padding: 15px;
+        border-radius: 20px;
+    }
+
+    .contactmodal-header {
+        font-size: 28px;
+    }
+
+    .contactmodal-input {
+        width: 95%;
+        font-size: 16px;
+        margin: 10px auto;
+    }
+
+    .contactmodal-button {
+        width: 80%;
+        font-size: 16px;
+    }
+
+    .contactmodal-close {
+        font-size: 24px;
+        top: 5px;
+        right: 10px;
+    }
+}
 @media (max-width: 850px) {
 
     .hamburger {
